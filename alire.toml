@@ -1,0 +1,25 @@
+name = "w25x"
+description = "A driver for W25Q16 and similar SPI flash chips"
+version = "0.1.0-dev"
+
+authors = ["Max Reznik"]
+maintainers = ["Max Reznik <reznikmm@gmail.com>"]
+maintainers-logins = ["reznikmm"]
+licenses = "Apache-2.0 WITH LLVM-exception"
+website = "https://github.com/reznikmm/w25x"
+tags = ["driver", "flash", "memory"]
+
+project-files = ["gnat/w25x.gpr"]
+
+[configuration]
+output_dir = "gnat"
+generate_ada = false
+generate_c = false
+
+[build-switches]
+development.style_checks = ["-gnaty"]
+development.contracts = "Yes"
+"*".debug_info = "Yes"
+
+[[depends-on]]
+hal = "^1.0.0"
