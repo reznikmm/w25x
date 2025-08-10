@@ -11,6 +11,22 @@ tags = ["driver", "flash", "memory"]
 
 project-files = ["gnat/w25x.gpr"]
 
+long-description = '''
+# Driver for W25Q16 and similar SPI flash chips.
+
+The `w25x` driver enables the following functionalities:
+
+- Erase a sector
+- Write data
+- Read data
+
+The driver supports usage both ~~with (TBD) and~~ without the Ada Driver Library,
+~~either via generic instantiation or by instantiating tagged type object.~~~
+
+More drivers in this style:
+[driver index](https://github.com/reznikmm/reznikmm/blob/main/drivers.md).
+'''
+
 [configuration]
 output_dir = "gnat"
 generate_ada = false
